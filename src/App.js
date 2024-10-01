@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import LogoCard from './components/Logo/LogoCard'
+import HeroCard from './components/HeroCard/HeroCard'
 
-function App() {
+export default function App() {
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:"flex",flexDirection:"column",justifyContent:"center",backgroundColor:"#F5F7FA",gap:10}}>
+      <HeroCard />
+      
     </div>
-  );
+  )
 }
-
-export default App;
