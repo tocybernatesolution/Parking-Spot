@@ -16,7 +16,12 @@ export default function HeroCard() {
           <p className={style.short}>
             Quick and Easy Way to Retrieve Vehicle Owner Information with a Simple QR Scan
           </p>
-          <div className={style.btn}>
+          <div className={style.btn}
+          onClick={()=>{
+            alert("jkfgjkdfkj")
+          }}
+          
+          >
             <span>Scan QR</span>
           </div>
         </div>
