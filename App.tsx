@@ -14,9 +14,20 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import SignupScreen from './src/screens/SignupScreen'
+import LoginScreen from './src/screens/LoginScreen'
+import ForgetScreen from './src/screens/ForgetScreen'
+import CreatePasswordScreen from './src/screens/CreatePassword'
+import { NavigationContainer } from '@react-navigation/native'
+import AutNavigator from './src/navigation/AutNavigator'
+import Subscription from './src/screens/Subscription'
 
 const App = () => {
-  return <SignupScreen />
+  return <Subscription />
+  // return(
+  //   <NavigationContainer>
+  //     <AutNavigator />
+  //   </NavigationContainer>
+  // )
   
 }
 

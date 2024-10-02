@@ -7,12 +7,17 @@ import { PressableWrapperText, WrapperText } from '../components/WrapperText';
 import ButtonView from '../components/ButtonView';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import { RNCamera } from 'react-native-camera';
+import { useNavigation } from '@react-navigation/native';
+import { ScreenNavigationProp } from '../navigation/ScreenNavigationProp';
 
 const SplashScreen = () => {
   const [scanned, setscanned] = useState(false)
-
+  let navigation=useNavigation<ScreenNavigationProp>();
   const onSuccess = (e: any) => {
     console.log(e);
+    navigation.navigate('Signup')
+    // navigation.navigate("Signup")
+
   };
   return (
     <>
@@ -69,6 +74,7 @@ const SplashScreen = () => {
 
             onPress={() => {
               console.log("Login");
+              navigation.navigate('Login')
 
             }}
           >

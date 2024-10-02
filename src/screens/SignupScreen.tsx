@@ -6,21 +6,19 @@ import ImageView from '../components/ImageView'
 import { PressableWrapperText, WrapperText } from '../components/WrapperText'
 import TextInputView from '../components/TextInputView'
 import ButtonView from '../components/ButtonView'
+import HeroComponent from '../components/HeroComponent'
+import { useNavigation } from '@react-navigation/native'
+import { ScreenNavigationProp } from '../navigation/ScreenNavigationProp'
 
 const SignupScreen = () => {
+    let navigation=useNavigation<ScreenNavigationProp>()
     return (
 
         <WrapperView
             accessibilityLabel='Signup Screen'
             style={[globalStyles.container, globalStyles.alignItems,]}>
-  
-                <WrapperView style={{ height: 10 }} />
-                <WrapperView style={[{ width: "100%", alignItems: "center", height: 150, }, globalStyles.justifyContent]}>
-                    <ImageView style={{ width: 229, height: 150 }} imgPath={require('../assets/images/logo.png')} />
-                </WrapperView>
-                {/* <WrapperView style={{ height: 5 }} /> */}
-                <WrapperText style={{ fontSize: 30, fontWeight: "bold", color: "#1E232C", textAlign: "center" }}>Sign Up</WrapperText>
-                <WrapperView style={{ height: 5 }} />
+             <HeroComponent text={'Sign Up'} />
+ 
                 <ScrollView
                 showsVerticalScrollIndicator={false}
                 style={{ flex: 1, width: "90%", alignSelf: "center", }}
@@ -90,6 +88,7 @@ const SignupScreen = () => {
 
             onPress={() => {
               console.log("Login");
+              navigation.navigate('Login')
 
             }}
           >
