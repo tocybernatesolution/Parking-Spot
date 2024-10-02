@@ -1,14 +1,19 @@
-import { View, Text, Image } from 'react-native'
-import React from 'react'
+import { Image, ImageProps } from 'react-native';
+import React from 'react';
 
-const ImageView = ({...props}) => {
-  return (
-   <Image 
-   {...props}
-   source={require('../assets/images/logo.png')}
-   
-   />
-  )
+interface ImageViewProps extends ImageProps {
+  imgPath: string | number; 
 }
 
-export default ImageView
+const ImageView: React.FC<ImageViewProps> = ({ imgPath, ...props }) => {
+  const isRemoteImage = typeof imgPath === 'string';
+  
+  return (
+    <Image
+      {...props}
+      source={isRemoteImage ? { uri: imgPath } : imgPath}  
+    />
+  );
+};
+
+export default ImageView;
