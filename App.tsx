@@ -20,14 +20,17 @@ import CreatePasswordScreen from './src/screens/CreatePassword'
 import { NavigationContainer } from '@react-navigation/native'
 import AutNavigator from './src/navigation/AutNavigator'
 import Subscription from './src/screens/Subscription'
+import CheckOutScreen from './src/screens/CheckOutScreen'
+import PaymentSuccess from './src/screens/PaymentSuccess'
+import ChatScreen from './src/screens/ChatScreen'
 
 const App = () => {
-  return <Subscription />
+  return <ChatScreen />
   // return(
   //   <NavigationContainer>
   //     <AutNavigator />
   //   </NavigationContainer>
-  // )
+  // )     
   
 }
 
