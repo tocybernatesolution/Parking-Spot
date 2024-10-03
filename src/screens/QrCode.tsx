@@ -4,12 +4,15 @@ import WrapperView from '../components/WrapperView'
 import { globalStyles } from '../utils/globalStyles'
 import QRCode from 'react-native-qrcode-svg';
 import ButtonView from '../components/ButtonView';
+import { useNavigation } from '@react-navigation/native';
+import { ScreenNavigationProp } from '../navigation/ScreenNavigationProp';
 
 const QrCode = () => {
     let base64Logo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAA..';
+    let navigation=useNavigation<ScreenNavigationProp>()
     return (
         <WrapperView
-            style={[globalStyles.container, globalStyles.alignItems]}
+            style={[globalStyles.container, globalStyles.alignItems,{width:"100%",height:"100%",}]}
         >
             <WrapperView
                 style={{ height: 50 }}
@@ -21,12 +24,18 @@ const QrCode = () => {
                 size={200}
                 logoBackgroundColor='transparent'
             />
+            
             <WrapperView
-                style={{ width: "100%", alignSelf: "center", alignItems: "center", position: "absolute", bottom: 20 }}
+            style={{width:"90%",alignSelf:"center",height:100,position:"absolute",bottom:10}}
+            
             >
-
-                <ButtonView t={'Log Out'} />
-            </WrapperView>
+                <ButtonView t={'Log Out'}
+                onPress={()=>{
+                    navigation.navigate('Splash')
+                }}
+                
+                />
+                </WrapperView>
         </WrapperView>
     )
 }

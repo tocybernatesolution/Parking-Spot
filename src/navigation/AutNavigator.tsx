@@ -6,6 +6,10 @@ import SignupScreen from '../screens/SignupScreen'
 import LoginScreen from '../screens/LoginScreen'
 import ForgetScreen from '../screens/ForgetScreen'
 import CreatePasswordScreen from '../screens/CreatePassword'
+import Subscription from '../screens/Subscription'
+import CheckOutScreen from '../screens/CheckOutScreen'
+import PaymentSuccess from '../screens/PaymentSuccess'
+import BottomTabs from './BottomTabs'
 const Stack = createNativeStackNavigator()
 const AutNavigator = () => {
     return (
@@ -19,6 +23,12 @@ const AutNavigator = () => {
             <Stack.Screen name='Login' component={LoginScreen} />  
             <Stack.Screen name='Forget' component={ForgetScreen} />  
             <Stack.Screen name='CreatePassword' component={CreatePasswordScreen} />  
+            {/* New Stack= */}
+            <Stack.Screen name='Subscrption' component={Subscription} />  
+            <Stack.Screen name='CheckOut' component={CheckOutScreen} />  
+            <Stack.Screen name='Success' component={PaymentSuccess} />  
+            <Stack.Screen name='Tabs' component={BottomTabs} />  
+            {/* <Stack.Screen name='Subscrption' component={Subscription} />   */}
         </Stack.Navigator>
     )
 }

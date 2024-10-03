@@ -6,6 +6,10 @@ type RootStackParamList = {
     Login:any;
     Forget:any;
     CreatePassword:any;
+    Subscrption:any;
+    CheckOut:any;
+    Success:any;
+    Tabs:any;
   };
   
   export type ScreenNavigationProp=NativeStackNavigationProp<RootStackParamList>

@@ -5,8 +5,11 @@ import { globalStyles } from '../utils/globalStyles'
 import HeroComponent from '../components/HeroComponent'
 import LottieView from 'lottie-react-native'
 import ButtonView from '../components/ButtonView'
+import { useNavigation } from '@react-navigation/native'
+import { ScreenNavigationProp } from '../navigation/ScreenNavigationProp'
 
 const PaymentSuccess = () => {
+  let navigation=useNavigation<ScreenNavigationProp>()
   return (
     <WrapperView
     style={[globalStyles.container,globalStyles.alignItems]}
@@ -31,7 +34,11 @@ const PaymentSuccess = () => {
           style={{width:"90%",alignSelf:"center"}}
           
           >
-<ButtonView t={'CHAT'} />
+<ButtonView t={'CHAT'}
+onPress={()=>{
+  navigation.navigate('Tabs')
+}}
+/>
           </WrapperView>
     </WrapperView>
   )

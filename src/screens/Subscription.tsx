@@ -7,8 +7,11 @@ import SliderItem from '../components/SliderItem'
 import Animated, { useAnimatedScrollHandler, useSharedValue } from 'react-native-reanimated'
 import Pagination from '../components/Pagination'
 import ButtonView from '../components/ButtonView'
+import { useNavigation } from '@react-navigation/native'
+import { ScreenNavigationProp } from '../navigation/ScreenNavigationProp'
 const Subscription = () => {
     let subscription=[1, 3, 5,2];
+    let navigation=useNavigation<ScreenNavigationProp>()
     let [paginationIndex,setpaginationIndex]=useState(0)
     let scrollX = useSharedValue(0)
     const onScrollHandler = useAnimatedScrollHandler({
@@ -83,6 +86,7 @@ const Subscription = () => {
                     <ButtonView t={"LOG OUT"}
                         onPress={() => {
                             console.log("CallBack Function");
+                            navigation.navigate('Splash');
 
                         }}
                     />

@@ -9,8 +9,11 @@ import ImageView from '../components/ImageView'
 import { Checkbox, TextInput } from 'react-native-paper'
 import SimpleTextInput from '../components/SimpleTextInput'
 import ButtonView from '../components/ButtonView'
+import { useNavigation } from '@react-navigation/native'
+import { ScreenNavigationProp } from '../navigation/ScreenNavigationProp'
 
 const CheckOutScreen = () => {
+  let navigation=useNavigation<ScreenNavigationProp>()
   return (
 
     <WrapperView
@@ -89,7 +92,12 @@ const CheckOutScreen = () => {
       <WrapperView style={{ height: 15 }} />
 
       <WrapperView style={{ width: "90%", alignSelf: "center", }}>
-        <ButtonView t={'PLACE ORDER'} />
+        <ButtonView t={'PLACE ORDER'}
+        onPress={()=>{
+          navigation.navigate('Success')
+        }}
+        
+        />
 
       </WrapperView>
       </ScrollView>

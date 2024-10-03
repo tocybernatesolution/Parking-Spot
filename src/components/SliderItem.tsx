@@ -3,6 +3,8 @@ import React from 'react'
 import { SubscriptionCard } from './SubscriptionCard'
 import WrapperView from './WrapperView'
 import Animated, { Extrapolation, interpolate, SharedValue, useAnimatedStyle } from 'react-native-reanimated'
+import { useNavigation } from '@react-navigation/native'
+import { ScreenNavigationProp } from '../navigation/ScreenNavigationProp'
 type Props={
     index:number
     scrollX:SharedValue<number>

@@ -61,6 +61,7 @@ const LoginScreen = () => {
                         onPress={() => {
                             console.log("CallBack Function");
                             //   setscanned(!scanned)
+                            navigation.navigate('Subscrption')
 
                         }}
                     />

@@ -1,8 +1,13 @@
+import { Pressable } from "react-native";
 import { WrapperText } from "./WrapperText"
 import WrapperView from "./WrapperView"
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { useNavigation } from "@react-navigation/native";
+import { ScreenNavigationProp } from "../navigation/ScreenNavigationProp";
 
 export const SubscriptionCard=()=>{
+  let navigation=useNavigation<ScreenNavigationProp>()
+
     return(
     <WrapperView
     style={{ width: 250, height: 350, backgroundColor: "#305581", alignSelf: "center", borderRadius: 20 }}
@@ -35,10 +40,19 @@ export const SubscriptionCard=()=>{
 
         </WrapperView>
     </WrapperView>
-    <WrapperView
+    <Pressable
         style={{position:"absolute",bottom:30, width: "90%", alignSelf: "center", backgroundColor: "#528FC5", padding: 10, alignItems: "center", borderRadius: 10 }}
+
+    onPress={()=>{
+        navigation.navigate('CheckOut')
+    }}
+    
     >
+
+    <WrapperView
+        >
         <WrapperText style={{ fontSize: 20, color: "#fff" }}>Buy now</WrapperText>
     </WrapperView>
+        </Pressable>
 </WrapperView>
 )}
