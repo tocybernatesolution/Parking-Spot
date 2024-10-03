@@ -10,7 +10,7 @@ const ChatScreen = () => {
     return (
         <WrapperView style={[globalStyles.container, globalStyles.alignItems]}>
             <WrapperView
-                style={{ height: 20 }}
+                style={{ height: 10 }}
             />
             <WrapperView style={{ width: "90%", alignSelf: "center", alignItems: "flex-start" }}>
                 <WrapperText style={{ fontSize: 18, color: "#000000", textAlign: "left" }}>Recent</WrapperText>
@@ -21,8 +21,8 @@ const ChatScreen = () => {
             />
             <ScrollView>
                 <WrapperView style={{width:"93%",alignSelf:"center",gap:30}}>
-                 {[1,2,4,5,6,7].map((e)=>(
-                <ChatCard />
+                 {[1,2,4,5,6,7].map((_,index)=>(
+                <ChatCard key={index} />
 
                  ))}
                 </WrapperView>
