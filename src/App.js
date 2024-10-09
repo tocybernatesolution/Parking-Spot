@@ -1,19 +1,7 @@
 import React from 'react'
-import LogoCard from './components/Logo/LogoCard'
-import HeroCard from './components/HeroCard/HeroCard'
-import Footer from './components/Footer/Footer'
-
+import HomePage from './pages/HomePage'
+import LoginPage from './pages/LoginPage'
+import ChatPage from './pages/ChatPage'
 export default function App() {
-
-
-  return (
-    <div>
-
-      <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", backgroundColor: "#F5F7FA", gap: 10 }}>
-        <HeroCard />
-      </div>
-      
-      <Footer />
-    </div>
-  )
-}
+  return <ChatPage /> 
+}             
