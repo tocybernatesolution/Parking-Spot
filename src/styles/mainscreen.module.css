@@ -1,0 +1,105 @@
+.container{
+    width: 100%;
+    height: auto;
+}
+.title{
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: bold;
+  /* gap: 20px; */
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card{
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    display: flex; 
+    height: auto;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);   
+}
+.cardtitle{
+ font-size: 0.8rem;
+ color: #ACACAC;
+ font-weight: bold;
+}
+.card strong{
+    color: #333333;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.tagline{
+    display: flex;
+    font-size: 0.8rem;
+    gap: 2px;
+}
+.tagline span{
+    color: #00AC4F;
+}
+.searchcard{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1px;
+    /* align-items: center; */
+
+}
+.allQr{
+    display: flex;
+    flex-direction: column;
+
+}
+.allQr span{
+    color: #16C098;
+    font-size: 0.7rem;
+}
+.button{
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.tableContainer {
+    max-width: 60%;
+    margin: 0 auto; /* Center the table container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent text from wrapping in the table cells */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+@media (min-width: 768px) {
+    .allQr strong{
+        font-size: 1.5rem;
+    }
+    .allQr span{
+        color: #16C098;
+        font-size: 1rem;
+    }
+  .cards{
+    flex-direction: row;
+  }
+  .card{
+    padding: 25px;
+
+  }
+
+}
