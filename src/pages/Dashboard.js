@@ -4,6 +4,8 @@ import style from '../styles/dashboard.module.css';
 import { IoIosHome } from "react-icons/io";
 import LogoCard from '../components/Logo/LogoCard';
 import MainScreen from './MainScreen';
+import AllUsers from './AllUsers';
+import Transaction from './Transaction';
 function Dashboard() {
     const [activeTab, setActiveTab] = useState('Home');
     const [drawerOpen, setDrawerOpen] = useState(false); // State for controlling drawer
@@ -22,11 +24,11 @@ function Dashboard() {
             case 'Home':
                 return <MainScreen />
             case 'Profile':
-                return <div>This is your Profile</div>;
+                return <AllUsers />;
             case 'Settings':
-                return <div>Configure your Settings here</div>;
+                return <Transaction />;
             default:
-                return <div>Welcome to the Dashboard</div>;
+                return <MainScreen />;
         }
     };
 
@@ -55,7 +57,7 @@ function Dashboard() {
                         onClick={() => handleTabClick('Profile')}
                     >
                         <IoIosHome />
-
+         
                         All User
                     </li>
                     <li
