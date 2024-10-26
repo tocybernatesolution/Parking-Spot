@@ -12,6 +12,7 @@
     "react-qr-barcode-scanner": "^2.0.0",
     "react-qr-code": "^2.0.15",
     "react-qr-reader": "^3.0.0-beta-1",
+    "react-router-dom": "^6.27.0",
     "react-scanner": "^1.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

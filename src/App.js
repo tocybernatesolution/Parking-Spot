@@ -4,5 +4,5 @@ import LoginPage from './pages/LoginPage'
 import ChatPage from './pages/ChatPage'
 import Dashboard from './pages/Dashboard'
 export default function App() {
-  return <Dashboard /> 
+  return <ChatPage /> 
 }             

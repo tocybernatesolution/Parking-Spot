@@ -75,5 +75,8 @@
     .inputQRCode {
         width:300px ;
     }
+    .tableContainer {
+        max-width: 100%;
+    }
     
 }

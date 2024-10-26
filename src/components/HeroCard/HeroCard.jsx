@@ -1,6 +1,7 @@
 import React from 'react';
 import LogoCard from '../Logo/LogoCard';
 import style from './herocard.module.css';
+import { Link } from 'react-router-dom';
 
 export default function HeroCard() {
   return (
@@ -16,14 +17,18 @@ export default function HeroCard() {
           <p className={style.short}>
             Quick and Easy Way to Retrieve Vehicle Owner Information with a Simple QR Scan
           </p>
+         <Link
+         to={'/ChatPage'}
+         >
           <div className={style.btn}
-          onClick={()=>{
-            alert("jkfgjkdfkj")
-          }}
-          
-          >
+          // onClick={()=>{
+            //   alert("jkfgjkdfkj")
+            // }}
+            
+            >
             <span>Scan QR</span>
           </div>
+            </Link>
         </div>
         <div className={style.right}>
          <img src='/scan.png' />
